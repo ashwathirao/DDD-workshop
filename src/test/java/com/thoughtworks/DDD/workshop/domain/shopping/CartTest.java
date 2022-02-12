@@ -106,5 +106,6 @@ public class CartTest {
         Order order = cart1.checkout();
         Assertions.assertEquals(3, order.getProductList().size());
         Assertions.assertEquals(58050.0, order.getCost().getValue());
+
     }
 }

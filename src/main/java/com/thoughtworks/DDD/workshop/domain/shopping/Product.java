@@ -1,6 +1,5 @@
-package com.thoughtworks.DDD.workshop.domain;
+package com.thoughtworks.DDD.workshop.domain.shopping;
 
-import java.util.Currency;
 import java.util.Objects;
 
 public class Product {

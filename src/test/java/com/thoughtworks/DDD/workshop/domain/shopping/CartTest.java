@@ -1,5 +1,6 @@
-package com.thoughtworks.DDD.workshop.domain;
+package com.thoughtworks.DDD.workshop.domain.shopping;
 
+import com.thoughtworks.DDD.workshop.domain.shopping.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

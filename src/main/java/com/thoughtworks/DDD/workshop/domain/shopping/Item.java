@@ -1,9 +1,8 @@
-package com.thoughtworks.DDD.workshop.domain;
+package com.thoughtworks.DDD.workshop.domain.shopping;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Stream;
 
 public class Item {
 

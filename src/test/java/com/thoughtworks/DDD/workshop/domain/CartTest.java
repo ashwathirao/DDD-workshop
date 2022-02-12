@@ -93,8 +93,6 @@ public class CartTest {
         cart1.addItems(item1);
         cart1.addItems(item2);
         Order order = cart1.checkout();
-        Assertions.assertEquals();
-
+        Assertions.assertEquals(3, order.getProductList().size());
     }
-
 }

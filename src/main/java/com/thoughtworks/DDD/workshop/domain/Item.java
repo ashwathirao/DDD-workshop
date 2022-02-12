@@ -1,6 +1,9 @@
 package com.thoughtworks.DDD.workshop.domain;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 public class Item {
 
@@ -15,6 +18,14 @@ public class Item {
     public Item(Product product, Integer quantity) {
         this.product = product;
         this.quantity = quantity;
+    }
+
+    public List<Product> getProducts() {
+        List<Product> products = new ArrayList<>();
+        for (int i = 0; i < quantity; i++) {
+            products.add(product);
+        }
+        return products;
     }
 
     public Item(Product product) {

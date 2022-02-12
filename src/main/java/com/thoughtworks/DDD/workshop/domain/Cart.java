@@ -57,14 +57,9 @@ public class Cart {
 
     public Order checkout() {
 
-        List<Product> list;
-        list = getAllItems().stream().map(item -> {
-            List<Product> orders = new ArrayList<>();
-            for(int quantity =0; item.getQuantity()>quantity ;quantity++){
-                orders.add(item.getProduct());
-            }
-            return orders;
-        }).collect(Collectors.toList());
+        List<Product> list = getAllItems().stream().flatMap(item ->
+            item.getProducts().stream()
+        ).collect(Collectors.toList());
         return new Order(list);
 
     }

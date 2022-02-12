@@ -10,6 +10,6 @@ public class PriceStrategyTest {
         Cart cart1 = new Cart("cartId1");
         Item item1 = new Item(new Product("Ipad", new Price(Currency.getInstance("INR"), 50000.0F)), 1);
         cart1.addItems(item1);
-        float discountedPrice = new CompetitiveDiscountPriceStrategy().getDiscountPriceForProduct(new Product(Currency.getInstance("INR"), 50000.0F));
+        new CompetitiveDiscountPriceStrategy().getDiscountPriceForProduct(new Product("Ipad", new Price(Currency.getInstance("INR"), 50000.0F)));
     }
 }

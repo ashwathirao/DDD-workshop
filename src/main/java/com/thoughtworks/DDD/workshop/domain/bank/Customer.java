@@ -27,4 +27,8 @@ public class Customer {
         accounts.forEach(account -> account.updateAddress(newAddress));
         this.address = newAddress;
     }
+
+    public Address getAddress() {
+        return address;
+    }
 }

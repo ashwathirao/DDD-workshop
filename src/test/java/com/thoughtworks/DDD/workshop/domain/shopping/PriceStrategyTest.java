@@ -1,6 +1,5 @@
 package com.thoughtworks.DDD.workshop.domain.shopping;
 
-import com.thoughtworks.DDD.workshop.domain.shopping.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.Currency;

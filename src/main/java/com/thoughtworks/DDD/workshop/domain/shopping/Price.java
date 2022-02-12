@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Price {
     private final Currency currency;
-    private final float value;
+    private float value;
 
     public Price(Currency currency, float value){
         this.currency = currency;
@@ -18,6 +18,8 @@ public class Price {
         return currency;
     }
 
-
+    public void increaseBy(float diff) {
+        value = value + diff;
+    }
 
 }

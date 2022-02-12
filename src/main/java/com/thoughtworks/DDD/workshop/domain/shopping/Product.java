@@ -4,6 +4,9 @@ import java.util.Objects;
 
 public class Product {
     private final String name;
+    private final Weight weight;
+    private Price price;
+
 
     @Override
     public boolean equals(Object o) {
@@ -18,11 +21,16 @@ public class Product {
         return Objects.hash(name);
     }
 
-    private Price price;
+    public Product(String name, Price price, Weight weight) {
+        this.name = name;
+        this.price = price;
+        this.weight = weight;
+    }
 
     public Product(String name, Price price) {
         this.name = name;
         this.price = price;
+        this.weight = new Weight(500);
     }
 
     public String getName() {
@@ -36,5 +44,9 @@ public class Product {
 
     public void setPrice(Price priceOfCompetitorProduct) {
         this.price = priceOfCompetitorProduct;
+    }
+
+    public Weight getWeight() {
+        return weight;
     }
 }

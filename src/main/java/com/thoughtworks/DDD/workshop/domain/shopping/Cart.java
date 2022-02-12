@@ -9,6 +9,7 @@ public class Cart {
     private final List<Item> removedItems;
     private final String cartId;
     private boolean checkout;
+    private CostCalculator costCalculator = new CostCalculator();
 
     public Cart(String cartId) {
         this.cartId = cartId;
@@ -61,7 +62,9 @@ public class Cart {
         List<Product> list = getAllItems().stream().flatMap(item ->
             item.getProducts().stream()
         ).collect(Collectors.toList());
-        return new Order(list);
+        Order order = new Order(list);
+        order.setCost(costCalculator.calculate(order));
+        return order;
 
     }
 }

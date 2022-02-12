@@ -1,0 +1,9 @@
+
+# production
+/build
+
+# misc
+settings.gradle
+gradlew.bat
+.gradle/
+

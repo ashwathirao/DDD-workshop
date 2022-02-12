@@ -1,4 +1,4 @@
-package com.thoughtworks.DDD.workshop.domain.Customer;
+package com.thoughtworks.DDD.workshop.domain.bank;
 
 import java.util.List;
 import java.util.UUID;

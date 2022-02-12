@@ -56,6 +56,7 @@ public class Cart {
     }
 
     public Order checkout() {
+        this.checkout = true;
 
         List<Product> list = getAllItems().stream().flatMap(item ->
             item.getProducts().stream()
